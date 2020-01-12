@@ -1,0 +1,87 @@
+<template>
+    <header class="slds-page-header">
+        <img src="/resources/lwc.png" />
+        <h2 class="slds-text-heading_large">
+            School Managemant System
+        </h2>
+    </header>
+    <main>
+        <!--template if:true={isStateList}>
+            <my-session-list onnavigate={handleNavigate}></my-session-list>
+        </!--template>
+        <template if:true={isStateDetails}>
+            <my-session-details session-id={sessionId}></my-session-details>
+        </template-->
+        <div>
+            <login class="login">
+                <div class="slds-card">
+                    <div class="slds-m-around_medium">
+                        <div class="slds-form-element">
+                            <!--label class="slds-form-element__label" for="text-input-id-1">Email</label-->
+                            <div
+                                class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+                            >
+                                <svg
+                                    class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+                                    aria-hidden="true"
+                                >
+                                    <use
+                                        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                                    ></use>
+                                </svg>
+                                <input
+                                    type="email"
+                                    id="login-email"
+                                    placeholder="Email"
+                                    class="slds-input"
+                                    oninput={handleEmailInput}
+                                />
+                            </div>
+                        </div>
+                        <br />
+
+                        <!--label class="slds-form-element__label" for="text-input-id-1">Password</label-->
+                        <div
+                            class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left"
+                        >
+                            <svg
+                                class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default"
+                                aria-hidden="true"
+                            >
+                                <use
+                                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                                ></use>
+                            </svg>
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Password"
+                                class="slds-input"
+                                oninput={handlePasswordInput}
+                            />
+                        </div>
+                        <br />
+                        <button
+                            label="Login"
+                            variant="brand"
+                            onclick={handleLoginCheck}
+                            class="slds-button slds-button_brand"
+                        >
+                            Login
+                        </button>
+                        <!--input type="email" placeholder="Email" label="Email" oninput={handleEmailInput}></lightning-input></br>
+                    <input type="password" placeholder="Password" label="Password" oninput={handlePasswordInput} class="slds-m-bottom_x-small"></lightning-input>
+                    <button label="Login" variant="brand" onclick={handleLoginCheck} class="slds-button slds-button_brand">Login</button-->
+                    </div>
+                </div>
+            </login>
+        </div>
+    </main>
+    <!--login>
+        <div>
+            <input type="text" placeholder="USERNAME"/></br>
+            <input type="text" placeholder="PASSWORD"/>
+        </div>
+        
+    </!--login-->
+</template>
